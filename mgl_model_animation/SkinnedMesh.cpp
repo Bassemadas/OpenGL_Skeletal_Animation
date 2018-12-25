@@ -2,18 +2,11 @@
 
 Copyright 2011 Etay Meiri
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+Modified By: Bassem Adas
+Modification Date: 22/12/2018
+Modification:	1- Supports many bones and animations
+				2- Bugs Correction
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 
@@ -158,14 +151,14 @@ bool SkinnedMesh::InitFromScene(const aiScene* pScene, const string& Filename)
 
 	glBindBuffer(GL_ARRAY_BUFFER, m_Buffers[TEXCOORD_VB]);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(TexCoords[0]) * TexCoords.size(), &TexCoords[0], GL_STATIC_DRAW);
-	GLenum err = glGetError();
-	if (err != GL_NO_ERROR)
-		std::cout << "texture error: " << glGetError() << endl;
+	//GLenum err = glGetError();
+	//if (err != GL_NO_ERROR)
+	//	std::cout << "texture error: " << glGetError() << endl;
 	glEnableVertexAttribArray(TEX_COORD_LOCATION);
 	glVertexAttribPointer(TEX_COORD_LOCATION, 2, GL_FLOAT, GL_FALSE, 0, 0);
-	err = glGetError();
-	if ( err != GL_NO_ERROR)
-		std::cout << "texture error: " << glGetError() << endl;
+	//err = glGetError();
+	//if ( err != GL_NO_ERROR)
+	//	std::cout << "texture error: " << glGetError() << endl;
 
 	glBindBuffer(GL_ARRAY_BUFFER, m_Buffers[NORMAL_VB]);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(Normals[0]) * Normals.size(), &Normals[0], GL_STATIC_DRAW);

@@ -21,9 +21,6 @@
     <ClCompile Include="model_loading.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="model_walking.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="compileheaderscpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,7 +33,13 @@
     <ClCompile Include="math_3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="model_animation.cpp">
+    <ClCompile Include="model_frame_animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="model_skeletal_animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="model_frame_auto_animation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

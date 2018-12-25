@@ -1,3 +1,9 @@
+/*
+*	Written by:		Bassem Adas
+*	Creation Date:  17/12/2018
+*	Last Modified:	23/12/2018
+*
+*/
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -72,11 +78,7 @@ int model_loading()
 	// -------------------------
 	Shader ourShader("1.model_loading.vs", "1.model_loading.fs");
 
-	// load models
-	// -----------
-	//Model ourModel("D:/resources/objects/nanosuit/nanosuit.obj");
-
-	Model ourModel("resources/Models/oliver-golpeo-balon/3/oliver.dae");
+	Model ourModel("D:/resources/objects/nanosuit/nanosuit.obj");
 
 
 	//int fileIndex = 1;
@@ -134,7 +136,7 @@ int model_loading()
 		//glm::mat4 model(1.0f);
 		//model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f)); // translate it down so it's at the center of the scene
 		//model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.1f, 0.0f, 0.0f)); 
-		model = glm::scale(glm::mat4(1.0f), glm::vec3(0.01f, 0.01f, 0.01f));	// it's a bit too big for our scene, so scale it down
+		model = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f, 0.1f, 0.1f));	// it's a bit too big for our scene, so scale it down
 		//model = glm::translate(model, glm::vec3(0.0f, -0.01f, 0.1f));	// it's a bit too big for our scene, so scale it down
 		ourShader.setMat4("model", model);
 		//ourModel->Draw(ourShader);
